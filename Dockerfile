@@ -1,10 +1,10 @@
-FROM alpine:3.5
+FROM alpine:3.11.3
 
 RUN apk add --update py2-pip
 
 COPY requirements.txt /usr/src/app/
 
-RUN pip install --nocache-dir -r /usr/src/app/requirements.txt
+RUN pip install -r /usr/src/app/requirements.txt
 
 COPY app.py /usr/src/app/
 COPY templates/index.html /usr/src/app/templates/
