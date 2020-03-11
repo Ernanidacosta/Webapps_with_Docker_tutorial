@@ -6,7 +6,7 @@ COPY requirements.txt /usr/src/app/
 
 RUN pip install --nocache-dir -r /usr/src/app/requirements.txt
 
-COPY app.py
+COPY app.py /usr/src/app/
 COPY templates/index.html /usr/src/app/templates/
 
 EXPOSE 5000
